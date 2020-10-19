@@ -1,0 +1,3 @@
+include ':paircolorview'
+include ':app'
+rootProject.name = "Pair Color View Library"
