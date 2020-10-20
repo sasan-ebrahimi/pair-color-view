@@ -45,6 +45,23 @@ class PairColorView : View {
         }
     }
 
+    fun setColors(darkColor: Int?, lightColor: Int? ){
+        darkColor?.let {
+            this.darkColor = it
+            darkPaint = Paint().apply {
+                color = it
+            }
+
+        }
+        lightColor?.let {
+            this.lightColor = it
+            lightPaint = Paint().apply {
+                color = it
+            }
+        }
+        invalidate()
+    }
+
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         canvas?.drawCircle(width/2.toFloat() , height/2.toFloat(), width.toFloat()/2 , darkPaint)
